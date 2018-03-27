@@ -1,2 +1,2 @@
 # know-your-house
-A serverless app that analyse the house values
+A serverless app that analyses the house values.
