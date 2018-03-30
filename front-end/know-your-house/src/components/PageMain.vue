@@ -1,13 +1,22 @@
 <template>
   <el-container>
     <el-header>{{ headTitle }}</el-header>
-    <el-main>Main</el-main>
+    <el-main>
+      <el-row :gutter="10">
+        <el-col :xs="24" :sm="12" :md="8" :lg="6" :xl="3">
+          <ComponentUserInput />
+        </el-col>
+      </el-row>
+    </el-main>
   </el-container>
 </template>
 
 <script>
+import ComponentUserInput from '@/components/ComponentUserInput';
+
 export default {
   name: 'PageMain',
+  components: { ComponentUserInput },
   data() {
     return {
       headTitle: 'Know Your House',
