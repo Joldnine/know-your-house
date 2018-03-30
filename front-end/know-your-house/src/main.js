@@ -3,10 +3,18 @@
 import Vue from 'vue';
 import Element from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+import * as VueGoogleMaps from 'vue2-google-maps';
 import App from './App';
 import router from './router';
 
 Vue.use(Element, { size: 'small' });
+
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: 'AIzaSyDVK9Xd5pNqceBBnl_LLyos6ANTZCLteFs',
+    libraries: 'places',
+  },
+});
 
 Vue.config.productionTip = false;
 

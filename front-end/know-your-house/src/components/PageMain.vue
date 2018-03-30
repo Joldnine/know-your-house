@@ -7,16 +7,22 @@
           <ComponentUserInput />
         </el-col>
       </el-row>
+      <el-row>
+        <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12">
+          <ComponentNeighbourhoodInfo />
+        </el-col>
+      </el-row>
     </el-main>
   </el-container>
 </template>
 
 <script>
 import ComponentUserInput from '@/components/ComponentUserInput';
+import ComponentNeighbourhoodInfo from '@/components/ComponentNeighbourhoodInfo';
 
 export default {
   name: 'PageMain',
-  components: { ComponentUserInput },
+  components: { ComponentUserInput, ComponentNeighbourhoodInfo },
   data() {
     return {
       headTitle: 'Know Your House',
@@ -37,7 +43,6 @@ export default {
   background-color: #ffffff;
   color: #409eff;
   text-align: center;
-  line-height: 160px;
 }
 h1, h2 {
   font-weight: normal;
