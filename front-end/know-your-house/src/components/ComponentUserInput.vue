@@ -15,14 +15,14 @@
         { type: 'number', message: 'Size must be a number'}
       ]"
     >
-      <el-input v-model="form.size"></el-input>
+      <el-input v-model.number="form.size"></el-input>
     </el-form-item>
     <el-form-item label="Level" prop="lvl"
       :rules="[
         { type: 'number', message: 'Level must be a number'}
       ]"
     >
-      <el-input v-model="form.lvl"></el-input>
+      <el-input v-model.number="form.lvl"></el-input>
     </el-form-item>
     <el-form-item>
       <el-button type="primary" @click="submitForm('form')">Submit</el-button>
