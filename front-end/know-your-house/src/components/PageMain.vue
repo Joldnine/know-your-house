@@ -1,9 +1,15 @@
 <template>
   <el-container>
-    <el-header>{{ headTitle }}</el-header>
+    <el-header>
+      <i class="el-icon-location"></i>
+      {{ headTitle }}
+    </el-header>
     <el-main>
       <el-row :gutter="10">
-        <el-col :xs="24" :sm="12" :md="8" :lg="6" :xl="3">
+        <el-col :xs="0" :sm="5" :md="7" :lg="8" :xl="9">
+          &nbsp;
+        </el-col>
+        <el-col :xs="24" :sm="12" :md="8" :lg="6" :xl="4">
           <ComponentUserInput />
         </el-col>
       </el-row>
