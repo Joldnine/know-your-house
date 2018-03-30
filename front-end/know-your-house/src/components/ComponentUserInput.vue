@@ -1,6 +1,6 @@
 <template>
 <div>
-  <el-form :model="form" status-icon ref="form" label-width="120px"
+  <el-form :model="form" status-icon ref="form" label-width="100px"
     class="demo-ruleForm">
     <el-form-item label="Address" prop="addr"
       :rules="[
@@ -17,7 +17,11 @@
     >
       <el-input v-model="form.size"></el-input>
     </el-form-item>
-    <el-form-item label="Level" prop="lvl">
+    <el-form-item label="Level" prop="lvl"
+      :rules="[
+        { type: 'number', message: 'Level must be a number'}
+      ]"
+    >
       <el-input v-model="form.lvl"></el-input>
     </el-form-item>
     <el-form-item>
@@ -41,6 +45,9 @@ export default {
     };
   },
   methods: {
+    submitForm(formName) {
+      console.log(this.$refs[formName]);
+    },
     resetForm(formName) {
       this.$refs[formName].resetFields();
     },

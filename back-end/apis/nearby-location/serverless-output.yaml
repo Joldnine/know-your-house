@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'An RESTful service
+
+  '
+Resources:
+  GetMrtDirectionFunction:
+    Properties:
+      CodeUri: s3://cs5224/1685bbd2297ec859ae219473a9d9d5fd
+      Events:
+        GetItems:
+          Properties:
+            Method: post
+            Path: /
+          Type: Api
+      Handler: api.post
+      Runtime: python3.6
+      Timeout: 600
+    Type: AWS::Serverless::Function
+Transform: AWS::Serverless-2016-10-31

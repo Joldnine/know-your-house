@@ -25,8 +25,6 @@ class Places(object):
     def __init__(self):
         self.key = 'AIzaSyBtoWfKhyiLdLrv_6VfkvTyNi0lzEWofRU'
         self.client = googlemaps.Client(self.key)
-        self.type = 'liquor_store'
-        self.language = 'en-AU'
 
     def get_geocode(self, street, city):
         place = '{}, {}'.format(street, city)
