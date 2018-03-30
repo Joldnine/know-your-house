@@ -1,6 +1,6 @@
 <template>
 <div>
-  <el-form :model="form" status-icon ref="form" label-width="100px"
+  <el-form :model="form" ref="form" label-width="100px"
     class="demo-ruleForm">
     <el-form-item label="Address" prop="addr"
       :rules="[
@@ -45,11 +45,12 @@ export default {
     };
   },
   methods: {
-    submitForm(formName) {
-      console.log(this.$refs[formName]);
+    submitForm() {
+      this.$store.commit('EDIT_USER_INPUT_ADDRESS', this.form.addr);
     },
     resetForm(formName) {
       this.$refs[formName].resetFields();
+      this.$store.commit('RESET_USER_INPUT_ADDRESS');
     },
   },
 };
