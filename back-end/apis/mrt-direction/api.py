@@ -1,13 +1,20 @@
 import googlemaps
 import json
 
+# Event example:
+# {
+#   "street": ["5 Dover Crescent"]
+#   ""
+# }
+
 
 def post(event, context):
+    event = json.loads(event['body'])  # comment this line if it is in aws lambda
     response_body = []
-    # return event['street'];
+    loc_type, keyword = 'mrt'
     for street in event['street']:
         street_location = Places().get_geocode(street, 'Singapore')
-        nearby_mrt = Places().get_nearby_place_geocode(street_location, 'subway_station', 1)
+        nearby_mrt = Places().get_nearby_place_geocode(street_location, loc_type, keyword, 1)
         direction_walking_nearest_mrt = Places().get_directions(street_location, nearby_mrt[0]['location'], 'walking')
         response_body.append({
             'original': {
@@ -30,8 +37,8 @@ class Places(object):
         place = '{}, {}'.format(street, city)
         return self.client.geocode(place)[0]['geometry']['location']
 
-    def get_nearby_place_geocode(self, location, place_type, qty):
-        places = self.client.places_nearby(location, rank_by='distance', type=place_type)['results']
+    def get_nearby_place_geocode(self, location, loc_type, keyword, qty):
+        places = self.client.places_nearby(location, rank_by='distance', type=loc_type, keyword=keyword)['results']
         count = 0
         total_qty = len(places)
         results = []

@@ -13,27 +13,32 @@ import json
 # 		"keyword": "mall"
 # 	}],
 # 	"need_distance": true  # optional
+#   "google_key": "gfweygfawyegfawyfg"  # optional
 # }
 
+
 def post(event, context):
-    # event = json.loads(event['body'])  # comment this line if it is in aws lambda
-    location = Location()
+    event = json.loads(event['body'])  # comment this line if it is in aws
     response_body = []
+    google_api = GoogleApi()
     need_distance = False
+
+    if 'google_key' in event:
+        google_api = GoogleApi(event['google_key'])
     if 'need_distance' in event:
         need_distance = event['need_distance']
-    print(event['types'])
+
     for loc_type in event['types']:
         response_body.append({
             'type': loc_type['name'],
-            'places': location.get_nearby(event['location'], loc_type, event['radius'], need_distance)
+            'places': google_api.get_nearby(event['location'], loc_type, event['radius'], need_distance)
         })
     return {"body": json.dumps(response_body), "statusCode": 200}
 
 
-class Location(object):
-    def __init__(self):
-        self.key = 'AIzaSyBtoWfKhyiLdLrv_6VfkvTyNi0lzEWofRU'
+class GoogleApi(object):
+    def __init__(self, key='AIzaSyBtoWfKhyiLdLrv_6VfkvTyNi0lzEWofRU'):
+        self.key = key
         self.client = googlemaps.Client(self.key)
         self.language = 'en-SG'
         self.region = 'SG'
