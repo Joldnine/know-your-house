@@ -1,8 +1,48 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-// import {  } from '@/api';
+import { getNearbyPlaces } from '@/api';
 
 Vue.use(Vuex);
+const QUERY_DEFAULT_SEARCH_DISTANCE = 1000;
+const QUERY_DEFAULT_NEED_WALKING_DISTANCE = false;
+const QUERIES = {
+  schools: {
+    types: [
+      {
+        name: 'school',
+        keyword: 'school',
+      },
+    ],
+  },
+  malls: {
+    types: [
+      {
+        name: 'mall',
+        keyword: 'mall',
+      },
+    ],
+  },
+  sports: {
+    types: [
+      {
+        name: 'sports',
+        keyword: 'sports',
+      },
+    ],
+  },
+  transport: {
+    types: [
+      {
+        name: 'mrt',
+        keyword: 'mrt',
+      },
+      {
+        name: 'bus stop',
+        keyword: 'bus stop',
+      },
+    ],
+  },
+};
 
 const store = new Vuex.Store({
   state: {
@@ -12,6 +52,7 @@ const store = new Vuex.Store({
       position: { lat: 1.3521, lng: 103.8198 },
       infoText: 'Singapore',
     }],
+    selected_tab: '',
   },
   mutations: {
     EDIT_USER_INPUT_ADDRESS: (state, addr) => {
@@ -28,9 +69,27 @@ const store = new Vuex.Store({
     },
   },
   actions: {
-    submitForm({ commit }, form) {
-      // TODO call api to get price and price trends
-      commit('EDIT_USER_INPUT_ADDRESS', form.addr);
+    requestNearbyPlaces({ commit }, { type, loc }) {
+      const query = JSON.parse(JSON.stringify(QUERIES[type]));
+      query.location = JSON.parse(JSON.stringify(loc));
+      query.radius = QUERY_DEFAULT_SEARCH_DISTANCE;
+      query.need_distance = QUERY_DEFAULT_NEED_WALKING_DISTANCE;
+      return new Promise((resolve) => {
+        getNearbyPlaces(query).then((result) => {
+          const markers = [];
+          const resultObj = JSON.parse(result.body);
+          resultObj.forEach((resultByType) => {
+            resultByType.places.forEach((place) => {
+              const marker = {};
+              marker.position = place.location;
+              marker.infoText = place.name;
+              markers.push(marker);
+            });
+          });
+          commit('SET_MAP_MARKERS', markers);
+        });
+        resolve();
+      });
     },
   },
   getters: {

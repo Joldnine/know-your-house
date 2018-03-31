@@ -12909,955 +12909,955 @@
     },
     {
         "address": "533 BEDOK NTH ST 3",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 3,
+        "num_school": 7,
+        "num_bus_stop": 10,
+        "num_mrt": 3
     },
     {
         "address": "702 BEDOK RESERVOIR RD",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 0,
+        "num_school": 5,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "520 BEDOK NTH AVE 1",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 3,
+        "num_school": 10,
+        "num_bus_stop": 10,
+        "num_mrt": 3
     },
     {
         "address": "116 BEDOK RESERVOIR RD",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 0,
+        "num_school": 5,
+        "num_bus_stop": 10,
+        "num_mrt": 4
     },
     {
         "address": "59 CHAI CHEE RD",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 2,
+        "num_school": 12,
+        "num_bus_stop": 10,
+        "num_mrt": 3
     },
     {
         "address": "122 BEDOK NTH ST 2",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 5,
+        "num_school": 11,
+        "num_bus_stop": 10,
+        "num_mrt": 3
     },
     {
         "address": "530 BEDOK NTH ST 3",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 3,
+        "num_school": 8,
+        "num_bus_stop": 10,
+        "num_mrt": 3
     },
     {
         "address": "401 BEDOK NTH AVE 3",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 3,
+        "num_school": 12,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "546 BEDOK NTH ST 3",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 3,
+        "num_school": 9,
+        "num_bus_stop": 10,
+        "num_mrt": 3
     },
     {
         "address": "138 BEDOK NTH ST 2",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 5,
+        "num_school": 12,
+        "num_bus_stop": 10,
+        "num_mrt": 3
     },
     {
         "address": "28 NEW UPP CHANGI RD",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 3,
+        "num_school": 12,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "410 BEDOK NTH AVE 2",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 4,
+        "num_school": 11,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "149 BEDOK RESERVOIR RD",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 0,
+        "num_school": 6,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "214 BEDOK NTH ST 1",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 4,
+        "num_school": 11,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "146 BEDOK RESERVOIR RD",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 0,
+        "num_school": 9,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "163 BEDOK STH RD",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 0,
+        "num_school": 8,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "144 BEDOK RESERVOIR RD",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 0,
+        "num_school": 7,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "169 BEDOK STH AVE 3",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 0,
+        "num_school": 9,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "52 NEW UPP CHANGI RD",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 3,
+        "num_school": 15,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "15 BEDOK STH RD",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 3,
+        "num_school": 9,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "107 BEDOK RESERVOIR RD",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 0,
+        "num_school": 5,
+        "num_bus_stop": 10,
+        "num_mrt": 4
     },
     {
         "address": "706 BEDOK NTH RD",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 1,
+        "num_school": 7,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "420 BEDOK NTH ST 1",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 3,
+        "num_school": 12,
+        "num_bus_stop": 10,
+        "num_mrt": 3
     },
     {
         "address": "708 BEDOK NTH RD",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 2,
+        "num_school": 7,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "156 BEDOK STH AVE 3",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 0,
+        "num_school": 8,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "713 BEDOK RESERVOIR RD",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 1,
+        "num_school": 8,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "44 BEDOK STH RD",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 3,
+        "num_school": 12,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "522 BEDOK NTH AVE 1",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 3,
+        "num_school": 9,
+        "num_bus_stop": 10,
+        "num_mrt": 3
     },
     {
         "address": "93 BEDOK NTH AVE 4",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 2,
+        "num_school": 15,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "712 BEDOK RESERVOIR RD",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 1,
+        "num_school": 9,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "672 JLN DAMAI",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 0,
+        "num_school": 5,
+        "num_bus_stop": 10,
+        "num_mrt": 3
     },
     {
         "address": "159 BEDOK STH AVE 3",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 0,
+        "num_school": 8,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "112 BEDOK NTH RD",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 3,
+        "num_school": 11,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "147 BEDOK RESERVOIR RD",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 0,
+        "num_school": 9,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "22 BEDOK STH AVE 1",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 4,
+        "num_school": 10,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "658 JLN TENAGA",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 0,
+        "num_school": 6,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "765 BEDOK RESERVOIR VIEW",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 2,
+        "num_school": 13,
+        "num_bus_stop": 10,
+        "num_mrt": 3
     },
     {
         "address": "180 BEDOK NTH RD",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 3,
+        "num_school": 14,
+        "num_bus_stop": 10,
+        "num_mrt": 3
     },
     {
         "address": "63 CHAI CHEE RD",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 2,
+        "num_school": 13,
+        "num_bus_stop": 10,
+        "num_mrt": 3
     },
     {
         "address": "761 BEDOK RESERVOIR VIEW",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 1,
+        "num_school": 14,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "185 BEDOK NTH RD",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 3,
+        "num_school": 16,
+        "num_bus_stop": 10,
+        "num_mrt": 3
     },
     {
         "address": "115 LENGKONG TIGA",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 0,
+        "num_school": 13,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "55 NEW UPP CHANGI RD",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 3,
+        "num_school": 15,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "516 BEDOK NTH AVE 2",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 3,
+        "num_school": 11,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "33 CHAI CHEE AVE",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 3,
+        "num_school": 12,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "20 BEDOK STH RD",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 4,
+        "num_school": 8,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "24 SIN MING RD",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 4,
+        "num_school": 4,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "406 SIN MING AVE",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 4,
+        "num_school": 10,
+        "num_bus_stop": 10,
+        "num_mrt": 0
     },
     {
         "address": "105 BISHAN ST 12",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 1,
+        "num_school": 9,
+        "num_bus_stop": 10,
+        "num_mrt": 5
     },
     {
         "address": "185 BISHAN ST 13",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 2,
+        "num_school": 11,
+        "num_bus_stop": 10,
+        "num_mrt": 3
     },
     {
         "address": "308 SHUNFU RD",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 5,
+        "num_school": 3,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "311 SHUNFU RD",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 5,
+        "num_school": 4,
+        "num_bus_stop": 10,
+        "num_mrt": 3
     },
     {
         "address": "109 BISHAN ST 12",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 1,
+        "num_school": 10,
+        "num_bus_stop": 10,
+        "num_mrt": 5
     },
     {
         "address": "125 BISHAN ST 12",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 1,
+        "num_school": 10,
+        "num_bus_stop": 10,
+        "num_mrt": 3
     },
     {
         "address": "281 BISHAN ST 24",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 2,
+        "num_school": 8,
+        "num_bus_stop": 10,
+        "num_mrt": 3
     },
     {
         "address": "177 BISHAN ST 13",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 2,
+        "num_school": 9,
+        "num_bus_stop": 10,
+        "num_mrt": 3
     },
     {
         "address": "130 BISHAN ST 12",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 1,
+        "num_school": 9,
+        "num_bus_stop": 10,
+        "num_mrt": 3
     },
     {
         "address": "443 SIN MING AVE",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 3,
+        "num_school": 8,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "249 BISHAN ST 22",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 4,
+        "num_school": 10,
+        "num_bus_stop": 10,
+        "num_mrt": 3
     },
     {
         "address": "193 BISHAN ST 13",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 2,
+        "num_school": 9,
+        "num_bus_stop": 10,
+        "num_mrt": 3
     },
     {
         "address": "293 BISHAN ST 22",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 2,
+        "num_school": 8,
+        "num_bus_stop": 10,
+        "num_mrt": 3
     },
     {
         "address": "447 BRIGHT HILL DR",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 3,
+        "num_school": 5,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "250 BISHAN ST 22",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 3,
+        "num_school": 11,
+        "num_bus_stop": 10,
+        "num_mrt": 3
     },
     {
         "address": "232 BISHAN ST 22",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 2,
+        "num_school": 9,
+        "num_bus_stop": 10,
+        "num_mrt": 3
     },
     {
         "address": "243 BISHAN ST 22",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 3,
+        "num_school": 10,
+        "num_bus_stop": 10,
+        "num_mrt": 3
     },
     {
         "address": "450 SIN MING AVE",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 3,
+        "num_school": 5,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "272 BISHAN ST 24",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 3,
+        "num_school": 8,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "214 BISHAN ST 23",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 2,
+        "num_school": 10,
+        "num_bus_stop": 10,
+        "num_mrt": 3
     },
     {
         "address": "147 BISHAN ST 11",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 1,
+        "num_school": 10,
+        "num_bus_stop": 10,
+        "num_mrt": 3
     },
     {
         "address": "444 SIN MING AVE",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 3,
+        "num_school": 8,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "145 BISHAN ST 11",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 1,
+        "num_school": 9,
+        "num_bus_stop": 10,
+        "num_mrt": 4
     },
     {
         "address": "167 BISHAN ST 13",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 1,
+        "num_school": 9,
+        "num_bus_stop": 10,
+        "num_mrt": 4
     },
     {
         "address": "163 BISHAN ST 13",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 1,
+        "num_school": 8,
+        "num_bus_stop": 10,
+        "num_mrt": 4
     },
     {
         "address": "265 BISHAN ST 24",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 3,
+        "num_school": 8,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "194 BISHAN ST 13",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 2,
+        "num_school": 9,
+        "num_bus_stop": 10,
+        "num_mrt": 3
     },
     {
         "address": "164 BISHAN ST 13",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 1,
+        "num_school": 7,
+        "num_bus_stop": 10,
+        "num_mrt": 4
     },
     {
         "address": "181 BISHAN ST 13",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 2,
+        "num_school": 9,
+        "num_bus_stop": 10,
+        "num_mrt": 3
     },
     {
         "address": "288 BISHAN ST 24",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 2,
+        "num_school": 8,
+        "num_bus_stop": 10,
+        "num_mrt": 3
     },
     {
         "address": "109 BT BATOK WEST AVE 6",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 1,
+        "num_school": 16,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "275 BT BATOK EAST AVE 4",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 3,
+        "num_school": 14,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "420 BT BATOK WEST AVE 2",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 0,
+        "num_school": 6,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "407 BT BATOK WEST AVE 4",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 0,
+        "num_school": 4,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "152 BT BATOK ST 11",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 1,
+        "num_school": 13,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "505 BT BATOK ST 52",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 1,
+        "num_school": 16,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "417 BT BATOK WEST AVE 4",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 0,
+        "num_school": 7,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "333 BT BATOK ST 32",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 0,
+        "num_school": 5,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "256 BT BATOK EAST AVE 4",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 2,
+        "num_school": 16,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "134 BT BATOK WEST AVE 6",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 1,
+        "num_school": 15,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "530 BT BATOK ST 51",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 1,
+        "num_school": 17,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "364 BT BATOK ST 31",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 1,
+        "num_school": 8,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "346 BT BATOK ST 34",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 0,
+        "num_school": 8,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "229 BT BATOK EAST AVE 3",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 2,
+        "num_school": 12,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "215 BT BATOK ST 21",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 2,
+        "num_school": 13,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "322 BT BATOK ST 33",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 0,
+        "num_school": 7,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "167 BT BATOK WEST AVE 8",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 1,
+        "num_school": 14,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "228 BT BATOK CTRL",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 1,
+        "num_school": 16,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "135 BT BATOK WEST AVE 6",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 1,
+        "num_school": 15,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "160 BT BATOK ST 11",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 1,
+        "num_school": 15,
+        "num_bus_stop": 10,
+        "num_mrt": 3
     },
     {
         "address": "130 BT BATOK WEST AVE 6",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 1,
+        "num_school": 17,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "536 BT BATOK ST 52",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 1,
+        "num_school": 18,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "338 BT BATOK ST 34",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 0,
+        "num_school": 8,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "178 BT BATOK WEST AVE 8",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 1,
+        "num_school": 15,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "231 BT BATOK EAST AVE 5",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 1,
+        "num_school": 15,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "349 BT BATOK ST 34",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 0,
+        "num_school": 8,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "511 BT BATOK ST 52",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 2,
+        "num_school": 15,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "323 BT BATOK ST 33",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 0,
+        "num_school": 8,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "371 BT BATOK ST 31",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 1,
+        "num_school": 10,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "149 BT BATOK WEST AVE 6",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 1,
+        "num_school": 16,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "307 BT BATOK ST 31",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 1,
+        "num_school": 12,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "236 BT BATOK EAST AVE 5",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 1,
+        "num_school": 15,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "243 BT BATOK EAST AVE 5",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 1,
+        "num_school": 15,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "266 BT BATOK EAST AVE 4",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 1,
+        "num_school": 13,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "339 BT BATOK ST 34",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 0,
+        "num_school": 7,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "289G BT BATOK ST 25",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 2,
+        "num_school": 12,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "291E BT BATOK ST 24",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 3,
+        "num_school": 12,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "391 BT BATOK WEST AVE 5",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 0,
+        "num_school": 7,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "211 BT BATOK ST 21",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 2,
+        "num_school": 17,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "384 BT BATOK WEST AVE 5",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 0,
+        "num_school": 8,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "118 BT BATOK WEST AVE 6",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 1,
+        "num_school": 18,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "289E BT BATOK ST 25",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 2,
+        "num_school": 12,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "288G BT BATOK ST 25",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 2,
+        "num_school": 12,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "192 BT BATOK WEST AVE 6",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 2,
+        "num_school": 15,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "290D BT BATOK EAST AVE 3",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 2,
+        "num_school": 13,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "389 BT BATOK WEST AVE 5",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 0,
+        "num_school": 7,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "115 BT BATOK WEST AVE 6",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 1,
+        "num_school": 19,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "136 JLN BT MERAH",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 1,
+        "num_school": 5,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "1 TELOK BLANGAH CRES",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 1,
+        "num_school": 11,
+        "num_bus_stop": 10,
+        "num_mrt": 3
     },
     {
         "address": "12 TAMAN HO SWEE",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 7,
+        "num_school": 3,
+        "num_bus_stop": 10,
+        "num_mrt": 3
     },
     {
         "address": "28 JLN BT MERAH",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 3,
+        "num_school": 11,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "8 JLN BT HO SWEE",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 7,
+        "num_school": 3,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "14 TAMAN HO SWEE",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 7,
+        "num_school": 3,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "113 JLN BT MERAH",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 1,
+        "num_school": 11,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "145 JLN BT MERAH",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 1,
+        "num_school": 5,
+        "num_bus_stop": 10,
+        "num_mrt": 2
     },
     {
         "address": "28 JLN KLINIK",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 3,
+        "num_school": 5,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "16 TELOK BLANGAH CRES",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 1,
+        "num_school": 9,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "24 BEO CRES",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 3,
+        "num_school": 5,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "30 JLN KLINIK",

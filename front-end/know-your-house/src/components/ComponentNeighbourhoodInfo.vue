@@ -36,51 +36,6 @@
 </template>
 
 <script>
-import { getNearbyPlaces } from '@/api';
-
-const QUERIES = {
-  schools: {
-    types: [
-      {
-        name: 'school',
-        keyword: 'school',
-      },
-    ],
-  },
-  malls: {
-    types: [
-      {
-        name: 'mall',
-        keyword: 'mall',
-      },
-    ],
-  },
-  sports: {
-    types: [
-      {
-        name: 'sports',
-        keyword: 'sports',
-      },
-    ],
-  },
-  transport: {
-    types: [
-      {
-        name: 'mrt',
-        keyword: 'mrt',
-      },
-      {
-        name: 'bus',
-        keyword: 'bus',
-      },
-    ],
-  },
-};
-
-const QUERY_DEFAULT_SEARCH_DISTANCE = 1000;
-
-const QUERY_DEFAULT_NEED_WALKING_DISTANCE = false;
-
 export default {
   name: 'ComponentNeighbourhoodInfo',
   data() {
@@ -138,26 +93,16 @@ export default {
     },
   },
   methods: {
-    handleNearbyPlaces(result) {
-      const markers = [];
-      const resultObj = JSON.parse(result.body);
-      resultObj.forEach((resultByType) => {
-        resultByType.places.forEach((place) => {
-          const marker = {};
-          marker.position = place.location;
-          marker.infoText = place.name;
-          markers.push(marker);
-        });
-      });
-      this.$store.commit('SET_MAP_MARKERS', markers);
-      this.infoWinOpen = false;
-    },
     handleTabClick(payload) {
-      const query = JSON.parse(JSON.stringify(QUERIES[payload.name]));
-      query.location = JSON.parse(JSON.stringify(this.mapCenter));
-      query.radius = QUERY_DEFAULT_SEARCH_DISTANCE;
-      query.need_distance = QUERY_DEFAULT_NEED_WALKING_DISTANCE;
-      getNearbyPlaces(query).then(result => this.handleNearbyPlaces(result));
+      this.$store.dispatch('requestNearbyPlaces', {
+        type: payload.name,
+        loc: this.mapCenter,
+      }).then(() => {
+        // this.loading = false
+      }).catch(() => {
+        // this.loading = false
+      });
+      this.infoWinOpen = false;
     },
     toggleInfoWindow(marker, idx) {
       this.infoWindowPos = marker.position;
@@ -175,8 +120,8 @@ export default {
 </script>
 
 <style scoped>
-.neighbourhood-info-section {
-  width: 100%;
-  height: 400px;
-}
+  .neighbourhood-info-section {
+    width: 100%;
+    height: 400px;
+  }
 </style>
