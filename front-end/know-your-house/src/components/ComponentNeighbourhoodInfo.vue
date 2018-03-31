@@ -24,13 +24,11 @@
             {{infoContent}}
           </gmap-info-window>
           <gmap-marker
-          v-for="(m, idx) in mapMarkers"
-          :key="idx"
-          :position="m.position"
-          :clickable="true"
-          :draggable="true"
-          @click="toggleInfoWindow(m, idx)"
-          title="aaaa"
+            v-for="(m, idx) in mapMarkers"
+            :key="idx"
+            :position="m.position"
+            :clickable="true"
+            @click="toggleInfoWindow(m, idx)"
           ></gmap-marker>
         </gmap-map>
     </div>
@@ -39,8 +37,6 @@
 
 <script>
 import { getNearbyPlaces } from '@/api';
-
-const SINGAPORE = { lat: 1.3521, lng: 103.8198 };
 
 const QUERIES = {
   schools: {
@@ -110,14 +106,7 @@ export default {
       ],
 
       // maps
-      // mapCenter: SINGAPORE,
-      mapZoom: 11,
-      mapMarkers: [
-        {
-          position: JSON.parse(JSON.stringify(SINGAPORE)),
-          infoText: 'Singapore',
-        },
-      ],
+      mapZoom: 14,
       infoContent: '',
       infoWindowPos: {
         lat: 0,
@@ -137,9 +126,14 @@ export default {
   computed: {
     mapCenter: {
       get() {
-        const addr = this.$store.getters.getUserInputAddress;
         const loc = this.$store.getters.getUserInputAddressLoc;
-        return addr === '' ? SINGAPORE : JSON.parse(loc);
+        return loc;
+      },
+    },
+    mapMarkers: {
+      get() {
+        const markers = this.$store.getters.getMapMarkers;
+        return markers;
       },
     },
   },
@@ -155,7 +149,7 @@ export default {
           markers.push(marker);
         });
       });
-      this.mapMarkers = markers;
+      this.$store.commit('SET_MAP_MARKERS', markers);
       this.infoWinOpen = false;
     },
     handleTabClick(payload) {

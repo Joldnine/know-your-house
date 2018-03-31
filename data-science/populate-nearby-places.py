@@ -94,9 +94,9 @@ def get_place_type_num(loc):
         "location": GOOGLE_API.get_geocode(loc, city),
         "radius": 1000,
         "types": [{
-            "name": "mall",
-            "keyword": "mall"
-        },
+                "name": "mall",
+                "keyword": "mall"
+            },
             {
                 "name": "school",
                 "keyword": "school"

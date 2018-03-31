@@ -52,7 +52,11 @@ export default {
       getGeocode(this.form.addr).then((result) => {
         loc = result.body;
         this.$store.commit('EDIT_USER_INPUT_ADDRESS', this.form.addr);
-        this.$store.commit('EDIT_USER_INPUT_ADDRESS_LOC', loc);
+        this.$store.commit('EDIT_USER_INPUT_ADDRESS_LOC', JSON.parse(loc));
+        this.$store.commit('SET_MAP_MARKERS', [{
+          position: JSON.parse(loc),
+          infoText: this.form.addr,
+        }]);
       });
     },
     resetForm(formName) {
