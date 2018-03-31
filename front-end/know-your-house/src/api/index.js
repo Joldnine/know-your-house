@@ -22,7 +22,3 @@ export function getGeocode(address) {
     }),
   }).then(response => response.json());
 }
-
-export function getNearByPlacesv2() {
-  return null;
-}

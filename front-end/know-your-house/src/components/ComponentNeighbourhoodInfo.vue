@@ -11,6 +11,10 @@
       </el-tabs>
     </div>
     <div class="neighbourhood-info-section">
+      <div class="neighbourhood-map">
+        <div class="neighbourhood-map-loading" v-if="mapLoading">
+          <div class="el-icon-loading neighbourhood-map-loading-spinner"></div>
+        </div>
         <gmap-map
           :center="mapCenter"
           :zoom="mapZoom"
@@ -27,10 +31,12 @@
             v-for="(m, idx) in mapMarkers"
             :key="idx"
             :position="m.position"
+            :icon="m.icon"
             :clickable="true"
             @click="toggleInfoWindow(m, idx)"
           ></gmap-marker>
         </gmap-map>
+      </div>
     </div>
   </div>
 </template>
@@ -61,6 +67,7 @@ export default {
       ],
 
       // maps
+      mapLoading: false,
       mapZoom: 14,
       infoContent: '',
       infoWindowPos: {
@@ -87,7 +94,20 @@ export default {
     },
     mapMarkers: {
       get() {
-        const markers = this.$store.getters.getMapMarkers;
+        const markers = [];
+        const loc = this.$store.getters.getUserInputAddressLoc;
+        const houseMarker = {};
+        houseMarker.position = loc;
+        houseMarker.infoText = 'Your House';
+        houseMarker.icon = 'http://maps.google.com/mapfiles/ms/icons/blue.png';
+        markers.push(houseMarker);
+        const nearbyPlaces = this.$store.getters.getNearbyPlaces;
+        nearbyPlaces.forEach((place) => {
+          const marker = {};
+          marker.position = place.location;
+          marker.infoText = place.name;
+          markers.push(marker);
+        });
         return markers;
       },
     },
@@ -98,11 +118,10 @@ export default {
         type: payload.name,
         loc: this.mapCenter,
       }).then(() => {
-        // this.loading = false
-      }).catch(() => {
-        // this.loading = false
+        this.mapLoading = false;
       });
       this.infoWinOpen = false;
+      this.mapLoading = true;
     },
     toggleInfoWindow(marker, idx) {
       this.infoWindowPos = marker.position;
@@ -121,7 +140,25 @@ export default {
 
 <style scoped>
   .neighbourhood-info-section {
+    position: relative;
     width: 100%;
     height: 400px;
   }
+  .neighbourhood-map {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .neighbourhood-map-loading {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128,128,128,0.5);
+    z-index: 10;
+  }
+  .neighbourhood-map-loading-spinner {
+    position:relative;
+    top: calc(50% - 1em);
+  }
+
 </style>
