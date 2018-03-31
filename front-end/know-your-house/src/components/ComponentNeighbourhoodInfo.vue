@@ -136,11 +136,11 @@ export default {
   },
   methods: {
     handleNearbyPlaces(result) {
-      let markers = [];
+      const markers = [];
       const resultObj = JSON.parse(result.body);
-      resultObj.forEach(resultByType => {
-        resultByType.places.forEach(place => {
-          let marker = {};
+      resultObj.forEach((resultByType) => {
+        resultByType.places.forEach((place) => {
+          const marker = {};
           marker.position = place.location;
           marker.infoText = place.name;
           markers.push(marker);
