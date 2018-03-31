@@ -33,6 +33,8 @@
 </template>
 
 <script>
+import { getGeocode } from '@/api';
+
 export default {
   name: 'ComponentUserInput',
   data() {
@@ -46,7 +48,12 @@ export default {
   },
   methods: {
     submitForm() {
-      this.$store.commit('EDIT_USER_INPUT_ADDRESS', this.form.addr);
+      let loc = {};
+      getGeocode(this.form.addr).then((result) => {
+        loc = result.body;
+        this.$store.commit('EDIT_USER_INPUT_ADDRESS', this.form.addr);
+        this.$store.commit('EDIT_USER_INPUT_ADDRESS_LOC', loc);
+      });
     },
     resetForm(formName) {
       this.$refs[formName].resetFields();

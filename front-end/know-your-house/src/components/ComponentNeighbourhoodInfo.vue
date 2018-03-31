@@ -110,7 +110,7 @@ export default {
       ],
 
       // maps
-      mapCenter: JSON.parse(JSON.stringify(SINGAPORE)),
+      // mapCenter: SINGAPORE,
       mapZoom: 11,
       mapMarkers: [
         {
@@ -133,6 +133,15 @@ export default {
         },
       },
     };
+  },
+  computed: {
+    mapCenter: {
+      get() {
+        const addr = this.$store.getters.getUserInputAddress;
+        const loc = this.$store.getters.getUserInputAddressLoc;
+        return addr === '' ? SINGAPORE : JSON.parse(loc);
+      },
+    },
   },
   methods: {
     handleNearbyPlaces(result) {
