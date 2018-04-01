@@ -25,10 +25,7 @@
           <div class="el-icon-loading page-loading-spinner"></div>
         </div>
         <el-row :gutter="8" v-if="!pageLoading">
-          <el-col :xs="0" :sm="5" :md="7" :lg="8" :xl="9">
-            &nbsp;
-          </el-col>
-          <el-col :xs="24" :sm="12" :md="8" :lg="6" :xl="4">
+          <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
             <ComponentPriceShower />
           </el-col>
         </el-row>
