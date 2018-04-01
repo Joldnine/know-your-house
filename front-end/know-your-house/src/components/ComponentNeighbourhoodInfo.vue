@@ -88,8 +88,7 @@ export default {
   computed: {
     mapCenter: {
       get() {
-        const loc = this.$store.getters.getUserInputAddressLoc;
-        return loc;
+        return this.$store.getters.getUserInputAddressLoc;
       },
     },
     mapMarkers: {
