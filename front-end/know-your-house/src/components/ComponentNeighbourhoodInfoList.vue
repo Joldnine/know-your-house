@@ -28,15 +28,6 @@
 <script>
 export default {
   name: 'ComponentUserInput',
-  data() {
-    return {
-      tableData: [{
-        date: '2016-05-03',
-        name: 'Tom',
-        address: 'No. 189, Grove St, Los Angeles',
-      }],
-    };
-  },
   computed: {
     nearbyPlaces: {
       get() {
@@ -63,6 +54,6 @@ export default {
     width: 100%;
     height: 454px;
     text-align: left;
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 </style>
