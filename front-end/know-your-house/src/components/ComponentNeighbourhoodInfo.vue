@@ -12,9 +12,9 @@
     </div>
     <div class="neighbourhood-info-section">
       <div class="neighbourhood-map">
-        <div class="neighbourhood-map-loading" v-if="mapLoading">
+        <!-- <div class="neighbourhood-map-loading" v-if="mapLoading">
           <div class="el-icon-loading neighbourhood-map-loading-spinner"></div>
-        </div>
+        </div> -->
         <gmap-map
           :center="mapCenter"
           :zoom="mapZoom"
@@ -61,11 +61,11 @@ export default {
       tabs: [
         {
           label: 'Schools',
-          name: 'schools',
+          name: 'school',
         },
         {
           label: 'Shopping malls',
-          name: 'malls',
+          name: 'mall',
         },
         {
           label: 'MRT',
@@ -73,13 +73,13 @@ export default {
         },
         {
           label: 'Bus Stops',
-          name: 'busStop',
+          name: 'bus stop',
         },
       ],
       activeTab: TAB_NAME_NOT_SELECTED,
 
       // maps
-      mapLoading: false,
+      // mapLoading: false,
       mapZoom: 14,
       infoContent: '',
       infoWindowPos: {
@@ -109,26 +109,27 @@ export default {
     },
     mapMarkers: {
       get() {
-        const markers = [];
-        const nearbyPlaces = this.$store.getters.getNearbyPlaces;
-        nearbyPlaces.forEach((place) => {
-          const marker = {};
-          marker.position = place.location;
-          marker.infoText = place.name;
-          markers.push(marker);
-        });
-        return markers;
+        return this.$store.getters.getMapMarkers;
       },
     },
   },
   methods: {
-    updateNearbyPlaces(type, loc) {
-      this.$store.dispatch('requestNearbyPlaces', { type, loc })
-        .then(() => {
-          this.mapLoading = false;
-        });
-      this.infoWinOpen = false;
-      this.mapLoading = true;
+    updateNearbyPlaces(type) {
+      const markers = [];
+      const nearbyPlaces = this.$store.getters.getNearbyPlaces;
+      nearbyPlaces.forEach((place) => {
+        // console.log(type);
+        // console.log(place.type);
+        if (type === place.type) {
+          const marker = {};
+          marker.position = place.location;
+          marker.infoText = place.name;
+          marker.distance = place.direction.distance.text.replace(' km', '');
+          marker.duration = place.direction.duration.text.replace(' mins', '');
+          markers.push(marker);
+        }
+      });
+      this.$store.commit('SET_MAP_MARKERS', markers);
     },
     handleTabClick(payload) {
       this.updateNearbyPlaces(payload.name, this.mapCenter);
@@ -159,7 +160,7 @@ export default {
     width: 100%;
     height: 100%;
   }
-  .neighbourhood-map-loading {
+  /* .neighbourhood-map-loading {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -169,6 +170,6 @@ export default {
   .neighbourhood-map-loading-spinner {
     position:relative;
     top: calc(50% - 1em);
-  }
+  } */
 
 </style>

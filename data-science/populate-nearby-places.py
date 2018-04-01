@@ -138,7 +138,7 @@ if __name__ == '__main__':
         result_list = json.load(file)
         file.close()
     try:
-        for item in result_list[2000:5000]:
+        for item in result_list[5000:]:
             if not item['num_mall'] and item['num_mall'] != 0:
                 print('Fetch:' + item['address'])
                 item_with_num = get_place_type_num(item['address'])

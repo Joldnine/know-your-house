@@ -31,17 +31,15 @@ export default {
   computed: {
     nearbyPlaces: {
       get() {
-        const nearbyPlaces = this.$store.getters.getNearbyPlaces;
+        const markers = this.$store.getters.getMapMarkers;
         const places = [];
-        if (nearbyPlaces.length > 0) {
-          nearbyPlaces.forEach((e) => {
-            places.push({
-              name: e.name,
-              distance: e.direction.distance.text.replace(' km', ''),
-              duration: e.direction.duration.text.replace(' mins', ''),
-            });
+        markers.forEach((marker) => {
+          places.push({
+            name: marker.infoText,
+            distance: marker.distance,
+            duration: marker.duration,
           });
-        }
+        });
         return places;
       },
     },

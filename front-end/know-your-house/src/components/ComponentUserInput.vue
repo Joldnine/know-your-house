@@ -48,11 +48,15 @@ export default {
   },
   methods: {
     submitForm() {
+      this.$store.commit('SET_PAGE_LOADING', true);
       let loc = {};
       getGeocode(this.form.addr).then((result) => {
         loc = result.body;
         this.$store.commit('EDIT_USER_INPUT_ADDRESS', this.form.addr);
         this.$store.commit('EDIT_USER_INPUT_ADDRESS_LOC', JSON.parse(loc));
+        this.$store.dispatch('requestNearbyPlaces', { loc }).then(() => {
+          this.$store.commit('SET_PAGE_LOADING', false);
+        });
       });
     },
     resetForm(formName) {

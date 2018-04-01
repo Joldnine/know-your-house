@@ -12,6 +12,9 @@
       </el-row>
     </el-header>
     <el-main>
+      <div class="page-loading" v-if="pageLoading">
+        <div class="el-icon-loading page-loading-spinner"></div>
+      </div>
       <el-row :gutter="8">
         <el-col :xs="0" :sm="5" :md="7" :lg="8" :xl="9">
           &nbsp;
@@ -20,7 +23,7 @@
           <ComponentUserInput />
         </el-col>
       </el-row>
-      <el-row :gutter="8">
+      <el-row :gutter="8" v-if="!pageLoading">
         <el-col :xs="0" :sm="5" :md="7" :lg="8" :xl="9">
           &nbsp;
         </el-col>
@@ -28,7 +31,7 @@
           <ComponentPriceShower />
         </el-col>
       </el-row>
-      <el-row :gutter="8">
+      <el-row :gutter="8" v-if="!pageLoading">
         <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
           <el-card>
             <ComponentNeighbourhoodInfo />
@@ -57,6 +60,13 @@ export default {
     ComponentNeighbourhoodInfo,
     ComponentNeighbourhoodInfoList,
     ComponentPriceShower,
+  },
+  computed: {
+    pageLoading: {
+      get() {
+        return this.$store.getters.getPageLoading;
+      },
+    },
   },
   data() {
     return {
@@ -94,5 +104,16 @@ li {
 }
 a {
   color: #42b983;
+}
+.page-loading {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128,128,128,0.5);
+  z-index: 10;
+}
+.page-loading-spinner {
+  position: absolute;
+  top: calc(50% - 1em);
 }
 </style>
