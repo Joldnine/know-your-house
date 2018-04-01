@@ -53,7 +53,7 @@ export default {
         loc = result.body;
         this.$store.commit('EDIT_USER_INPUT_ADDRESS', this.form.addr);
         this.$store.commit('EDIT_USER_INPUT_ADDRESS_LOC', JSON.parse(loc));
-        this.$store.commit('SET_MAP_MARKERS', [{
+        this.$store.commit('SET_NEARBY_PLACES', [{
           position: JSON.parse(loc),
           infoText: this.form.addr,
         }]);

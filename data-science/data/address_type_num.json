@@ -13861,24 +13861,24 @@
     },
     {
         "address": "30 JLN KLINIK",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 3,
+        "num_school": 5,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "15 TELOK BLANGAH CRES",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 1,
+        "num_school": 10,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "104 BT PURMEI RD",
-        "num_mall": "",
-        "num_school": "",
-        "num_bus_stop": "",
-        "num_mrt": ""
+        "num_mall": 1,
+        "num_school": 2,
+        "num_bus_stop": 10,
+        "num_mrt": 1
     },
     {
         "address": "129 BT MERAH VIEW",

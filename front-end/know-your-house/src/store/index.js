@@ -5,7 +5,7 @@ import { getNearbyPlaces } from '@/api';
 Vue.use(Vuex);
 
 const QUERY_DEFAULT_SEARCH_DISTANCE = 1000;
-const QUERY_DEFAULT_NEED_WALKING_DISTANCE = false;
+const QUERY_DEFAULT_NEED_WALKING_DISTANCE = true;
 const QUERIES = {
   schools: {
     types: [
@@ -50,7 +50,7 @@ const store = new Vuex.Store({
     user_input_address: 'Singapore',
     user_input_address_loc: { lat: 1.3521, lng: 103.8198 },
     near_by_places: [],
-    selected_tab: '',
+    selected_type: '',
   },
   getters: {
     getUserInputAddress: state => state.user_input_address,
