@@ -43,15 +43,17 @@ const QUERIES = {
 
 const store = new Vuex.Store({
   state: {
-    user_input_address: 'Singapore',
+    user_input_address: '',
     user_input_address_loc: { lat: 1.3521, lng: 103.8198 },
     near_by_places: [],
     selected_type: '',
+    price: 1000000,
   },
   getters: {
     getUserInputAddress: state => state.user_input_address,
     getUserInputAddressLoc: state => state.user_input_address_loc,
     getNearbyPlaces: state => state.near_by_places,
+    getPrice: state => state.price,
   },
   mutations: {
     EDIT_USER_INPUT_ADDRESS: (state, addr) => {

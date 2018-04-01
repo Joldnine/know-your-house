@@ -21,6 +21,14 @@
         </el-col>
       </el-row>
       <el-row :gutter="8">
+        <el-col :xs="0" :sm="5" :md="7" :lg="8" :xl="9">
+          &nbsp;
+        </el-col>
+        <el-col :xs="24" :sm="12" :md="8" :lg="6" :xl="4">
+          <ComponentPriceShower />
+        </el-col>
+      </el-row>
+      <el-row :gutter="8">
         <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
           <el-card>
             <ComponentNeighbourhoodInfo />
@@ -40,10 +48,16 @@
 import ComponentUserInput from '@/components/ComponentUserInput';
 import ComponentNeighbourhoodInfo from '@/components/ComponentNeighbourhoodInfo';
 import ComponentNeighbourhoodInfoList from '@/components/ComponentNeighbourhoodInfoList';
+import ComponentPriceShower from '@/components/ComponentPriceShower';
 
 export default {
   name: 'PageMain',
-  components: { ComponentUserInput, ComponentNeighbourhoodInfo, ComponentNeighbourhoodInfoList },
+  components: {
+    ComponentUserInput,
+    ComponentNeighbourhoodInfo,
+    ComponentNeighbourhoodInfoList,
+    ComponentPriceShower,
+  },
   data() {
     return {
       headTitle: 'Know Your House',
