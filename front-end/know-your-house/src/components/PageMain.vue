@@ -12,9 +12,6 @@
       </el-row>
     </el-header>
     <el-main>
-      <div class="page-loading" v-if="pageLoading">
-        <div class="el-icon-loading page-loading-spinner"></div>
-      </div>
       <el-row :gutter="8">
         <el-col :xs="0" :sm="5" :md="7" :lg="8" :xl="9">
           &nbsp;
@@ -23,26 +20,31 @@
           <ComponentUserInput />
         </el-col>
       </el-row>
-      <el-row :gutter="8" v-if="!pageLoading">
-        <el-col :xs="0" :sm="5" :md="7" :lg="8" :xl="9">
-          &nbsp;
-        </el-col>
-        <el-col :xs="24" :sm="12" :md="8" :lg="6" :xl="4">
-          <ComponentPriceShower />
-        </el-col>
-      </el-row>
-      <el-row :gutter="8" v-if="!pageLoading">
-        <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
-          <el-card>
-            <ComponentNeighbourhoodInfo />
-          </el-card>
-        </el-col>
-        <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
-          <el-card>
-            <ComponentNeighbourhoodInfoList />
-          </el-card>
-        </el-col>
-      </el-row>
+      <div class="house-info-section">
+        <div class="page-loading" v-if="pageLoading">
+          <div class="el-icon-loading page-loading-spinner"></div>
+        </div>
+        <el-row :gutter="8" v-if="!pageLoading">
+          <el-col :xs="0" :sm="5" :md="7" :lg="8" :xl="9">
+            &nbsp;
+          </el-col>
+          <el-col :xs="24" :sm="12" :md="8" :lg="6" :xl="4">
+            <ComponentPriceShower />
+          </el-col>
+        </el-row>
+        <el-row :gutter="8" v-if="!pageLoading">
+          <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+            <el-card>
+              <ComponentNeighbourhoodInfo />
+            </el-card>
+          </el-col>
+          <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+            <el-card>
+              <ComponentNeighbourhoodInfoList />
+            </el-card>
+          </el-col>
+        </el-row>
+      </div>
     </el-main>
   </el-container>
 </template>
@@ -105,11 +107,15 @@ li {
 a {
   color: #42b983;
 }
+.house-info-section {
+  position: relative;
+  min-height: 400px;
+}
 .page-loading {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(128,128,128,0.5);
+  background-color: white;
   z-index: 10;
 }
 .page-loading-spinner {
