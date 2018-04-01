@@ -3,7 +3,7 @@ import json
 
 
 class GoogleApi(object):
-    def __init__(self, key='AIzaSyBPVMnvgNrhJUK5dYkSygm322ZA4Ot0mbU'):
+    def __init__(self, key='AIzaSyCectestiH2Rh1AgIZlj5Cm5Zdhr28gW6Q'):
         self.key = key
         self.client = googlemaps.Client(self.key, connect_timeout=5, read_timeout=5)
         self.language = 'en-SG'
