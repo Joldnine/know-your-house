@@ -13,11 +13,14 @@
   "dependencies": {
     "countup.js": "^1.9.3",
     "element-ui": "^2.3.2",
+    "firebase": "^4.12.1",
+    "hchs-vue-charts": "^1.2.8",
     "map-icons": "^3.0.3",
     "vue": "^2.5.2",
     "vue-countup-v2": "^1.0.3",
     "vue-router": "^3.0.1",
     "vue2-google-maps": "^0.8.11",
+    "vuefire": "^2.0.0-alpha.7",
     "vuex": "^3.0.1"
   },
   "devDependencies": {

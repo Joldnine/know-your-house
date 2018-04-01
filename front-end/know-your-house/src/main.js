@@ -5,6 +5,9 @@ import Element from 'element-ui';
 import locale from 'element-ui/lib/locale/lang/en';
 import 'element-ui/lib/theme-chalk/index.css';
 import * as VueGoogleMaps from 'vue2-google-maps';
+import VueFire from 'vuefire';
+import firebase from 'firebase/app';
+import 'firebase/firestore';
 // import CountUp from 'countup.js';
 // import vueCountUpV2 from 'vue-countup-v2';
 import store from './store';
@@ -21,6 +24,20 @@ Vue.use(VueGoogleMaps, {
     libraries: 'places',
   },
 });
+
+Vue.use(VueFire);
+firebase.initializeApp({
+  apiKey: 'AIzaSyA6uso8-9fjMjaQIojmVC4J1947tZ2L5Os',
+  authDomain: 'cs5224-1521280264976.firebaseapp.com',
+  databaseURL: 'https://cs5224-1521280264976.firebaseio.com',
+  projectId: 'cs5224-1521280264976',
+  storageBucket: 'cs5224-1521280264976.appspot.com',
+  messagingSenderId: '1035770641969',
+});
+
+const db = firebase.firestore();
+
+export default db;
 
 Vue.config.productionTip = false;
 

@@ -106,7 +106,7 @@ a {
 }
 .house-info-section {
   position: relative;
-  min-height: 400px;
+  min-height: 200px;
 }
 .page-loading {
   position: absolute;
@@ -118,5 +118,6 @@ a {
 .page-loading-spinner {
   position: absolute;
   top: calc(50% - 1em);
+  color: #409eff;
 }
 </style>
