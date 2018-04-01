@@ -2,6 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue';
 import Element from 'element-ui';
+import locale from 'element-ui/lib/locale/lang/en';
 import 'element-ui/lib/theme-chalk/index.css';
 import * as VueGoogleMaps from 'vue2-google-maps';
 // import CountUp from 'countup.js';
@@ -10,7 +11,7 @@ import store from './store';
 import App from './App';
 import router from './router';
 
-Vue.use(Element, { size: 'small' });
+Vue.use(Element, { size: 'small', locale });
 // Vue.use(CountUp);
 // Vue.use(vueCountUpV2);
 
