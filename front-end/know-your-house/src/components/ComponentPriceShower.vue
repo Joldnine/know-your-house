@@ -26,7 +26,7 @@ export default {
       duration: 2,
       options: {
         separator: ',',
-        prefix: 'SGD\n',
+        prefix: 'SGD ',
       },
     };
   },
