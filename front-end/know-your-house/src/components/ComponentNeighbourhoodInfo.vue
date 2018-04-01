@@ -57,12 +57,12 @@ export default {
           name: 'malls',
         },
         {
-          label: 'Sports facilities',
-          name: 'sports',
+          label: 'MRT',
+          name: 'mrt',
         },
         {
-          label: 'Transport',
-          name: 'transport',
+          label: 'Bus Stops',
+          name: 'busStop',
         },
       ],
 

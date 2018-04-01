@@ -23,20 +23,16 @@ const QUERIES = {
       },
     ],
   },
-  sports: {
-    types: [
-      {
-        name: 'sports',
-        keyword: 'sports',
-      },
-    ],
-  },
-  transport: {
+  mrt: {
     types: [
       {
         name: 'mrt',
         keyword: 'mrt',
       },
+    ],
+  },
+  busStop: {
+    types: [
       {
         name: 'bus stop',
         keyword: 'bus stop',
