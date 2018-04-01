@@ -1,7 +1,7 @@
 <template>
   <div class="neighbourhood-info">
     <div class="neighbourhood-info-nav">
-      <el-tabs @tab-click="handleTabClick">
+      <el-tabs v-model="activeTab" @tab-click="handleTabClick">
         <el-tab-pane v-for="(tab, idx) in tabs"
           :key="idx"
           :label="tab.label"
@@ -28,6 +28,15 @@
             {{infoContent}}
           </gmap-info-window>
           <gmap-marker
+            :position="mapCenter"
+            icon="http://maps.google.com/mapfiles/ms/icons/blue.png"
+            :clickable="true"
+            @click="toggleInfoWindow({
+              position: mapCenter,
+              infoText: 'Your House'
+            }, -1)"
+          ></gmap-marker>
+          <gmap-marker
             v-for="(m, idx) in mapMarkers"
             :key="idx"
             :position="m.position"
@@ -42,6 +51,8 @@
 </template>
 
 <script>
+const TAB_NAME_NOT_SELECTED = 'None';
+
 export default {
   name: 'ComponentNeighbourhoodInfo',
   data() {
@@ -65,6 +76,7 @@ export default {
           name: 'busStop',
         },
       ],
+      activeTab: TAB_NAME_NOT_SELECTED,
 
       // maps
       mapLoading: false,
@@ -88,18 +100,16 @@ export default {
   computed: {
     mapCenter: {
       get() {
-        return this.$store.getters.getUserInputAddressLoc;
+        const loc = this.$store.getters.getUserInputAddressLoc;
+        if (TAB_NAME_NOT_SELECTED.localeCompare(this.activeTab)) {
+          this.updateNearbyPlaces(this.activeTab, loc);
+        }
+        return loc;
       },
     },
     mapMarkers: {
       get() {
         const markers = [];
-        const loc = this.$store.getters.getUserInputAddressLoc;
-        const houseMarker = {};
-        houseMarker.position = loc;
-        houseMarker.infoText = 'Your House';
-        houseMarker.icon = 'http://maps.google.com/mapfiles/ms/icons/blue.png';
-        markers.push(houseMarker);
         const nearbyPlaces = this.$store.getters.getNearbyPlaces;
         nearbyPlaces.forEach((place) => {
           const marker = {};
@@ -112,15 +122,16 @@ export default {
     },
   },
   methods: {
-    handleTabClick(payload) {
-      this.$store.dispatch('requestNearbyPlaces', {
-        type: payload.name,
-        loc: this.mapCenter,
-      }).then(() => {
-        this.mapLoading = false;
-      });
+    updateNearbyPlaces(type, loc) {
+      this.$store.dispatch('requestNearbyPlaces', { type, loc })
+        .then(() => {
+          this.mapLoading = false;
+        });
       this.infoWinOpen = false;
       this.mapLoading = true;
+    },
+    handleTabClick(payload) {
+      this.updateNearbyPlaces(payload.name, this.mapCenter);
     },
     toggleInfoWindow(marker, idx) {
       this.infoWindowPos = marker.position;
