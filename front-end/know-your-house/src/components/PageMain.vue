@@ -41,6 +41,18 @@
             </el-card>
           </el-col>
         </el-row>
+        <el-row :gutter="8">
+          <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
+            <h1>House Price History</h1>
+          </el-col>
+        </el-row>
+        <el-row :gutter="8">
+          <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12">
+            <el-card>
+              <ComponentPriceHistory />
+            </el-card>
+          </el-col>
+        </el-row>
       </div>
     </el-main>
   </el-container>
@@ -51,6 +63,7 @@ import ComponentUserInput from '@/components/ComponentUserInput';
 import ComponentNeighbourhoodInfo from '@/components/ComponentNeighbourhoodInfo';
 import ComponentNeighbourhoodInfoList from '@/components/ComponentNeighbourhoodInfoList';
 import ComponentPriceShower from '@/components/ComponentPriceShower';
+import ComponentPriceHistory from '@/components/ComponentPriceHistory';
 
 export default {
   name: 'PageMain',
@@ -59,6 +72,7 @@ export default {
     ComponentNeighbourhoodInfo,
     ComponentNeighbourhoodInfoList,
     ComponentPriceShower,
+    ComponentPriceHistory,
   },
   computed: {
     pageLoading: {

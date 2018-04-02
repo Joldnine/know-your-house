@@ -29,7 +29,7 @@
           </gmap-info-window>
           <gmap-marker
             :position="mapCenter"
-            icon="http://maps.google.com/mapfiles/ms/icons/blue.png"
+            :icon="'http://maps.google.com/mapfiles/ms/icons/blue.png'"
             :clickable="true"
             @click="toggleInfoWindow({
               position: mapCenter,
