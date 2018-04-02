@@ -1,27 +1,31 @@
 <template>
-  <chartjs-line
-    :data="data"
-    :labels="labels"
-    :datalabel="'Price'"
-    :bordercolor="'#409eff'"
-    :pointborderwidth="4"
-    :pointbordercolor="'#f35009'"
-    :option="{
-      responsive:true,
-      maintainAspectRatio:true,
-      legend: {
-        display:false,
-      },
-      scales: {
-        yAxes: [{
-          display: true,
-          ticks: {
-            beginAtZero:true,
-          },
-        }],
-      },
-    }"
-  ></chartjs-line>
+  <div class="chart-section">
+    <canvas id="mycanvas" count="1" style="height:100%, width:100%"></canvas>
+    <chartjs-line
+      :data="data"
+      :labels="labels"
+      :datalabel="'Price'"
+      :bordercolor="'#409eff'"
+      :pointborderwidth="4"
+      :pointbordercolor="'#f35009'"
+      :option="{
+        responsive:true,
+        maintainAspectRatio:false,
+        legend: {
+          display:false,
+        },
+        scales: {
+          yAxes: [{
+            display: true,
+            ticks: {
+              beginAtZero:true,
+            },
+          }],
+        },
+      }"
+      target="mycanvas"
+    ></chartjs-line>
+  </div>
 </template>
 
 <script>
@@ -35,3 +39,11 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+  .chart-section {
+    max-width: 768px;
+    height: 300px;
+    margin: auto;
+  }
+</style>

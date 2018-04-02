@@ -13,10 +13,8 @@
     </el-header>
     <el-main>
       <el-row :gutter="8">
-        <el-col :xs="0" :sm="5" :md="7" :lg="8" :xl="9">
-          &nbsp;
-        </el-col>
-        <el-col :xs="24" :sm="12" :md="8" :lg="6" :xl="4">
+        <el-col :xs="24" :sm="{span:12, offset:5}" :md="{span:8, offset:7}"
+                :lg="{span:6, offset:8}" :xl="{span:4, offset:9}">
           <ComponentUserInput />
         </el-col>
       </el-row>
@@ -25,11 +23,21 @@
           <div class="el-icon-loading page-loading-spinner"></div>
         </div>
         <el-row :gutter="8" v-if="!pageLoading">
-          <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
+          <el-col>
             <ComponentPriceShower />
           </el-col>
         </el-row>
-        <el-row :gutter="8" v-if="!pageLoading">
+        <el-row :gutter="8" style="margin-bottom:10px" v-if="!pageLoading">
+          <el-col>
+            <el-card>
+              <div slot="header" class="clearfix">
+                <span>House Price History</span>
+              </div>
+              <ComponentPriceHistory />
+            </el-card>
+          </el-col>
+        </el-row>
+        <el-row :gutter="8" style="margin-bottom:10px" v-if="!pageLoading">
           <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
             <el-card>
               <ComponentNeighbourhoodInfo />
@@ -38,21 +46,6 @@
           <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
             <el-card>
               <ComponentNeighbourhoodInfoList />
-            </el-card>
-          </el-col>
-        </el-row>
-        <!-- <el-row :gutter="8">
-          <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
-            <h1>House Price History</h1>
-          </el-col>
-        </el-row> -->
-        <el-row :gutter="8">
-          <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12">
-            <el-card>
-              <div slot="header" class="clearfix">
-                <span>House Price History</span>
-              </div>
-              <ComponentPriceHistory />
             </el-card>
           </el-col>
         </el-row>
