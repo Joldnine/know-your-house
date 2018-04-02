@@ -22,33 +22,35 @@
         <div class="page-loading" v-if="pageLoading">
           <div class="el-icon-loading page-loading-spinner"></div>
         </div>
-        <el-row :gutter="8" v-if="!pageLoading">
-          <el-col>
-            <ComponentPriceShower />
-          </el-col>
-        </el-row>
-        <el-row :gutter="8" style="margin-bottom:10px" v-if="!pageLoading">
-          <el-col>
-            <el-card>
-              <div slot="header" class="clearfix">
-                <span>House Price History</span>
-              </div>
-              <ComponentPriceHistory />
-            </el-card>
-          </el-col>
-        </el-row>
-        <el-row :gutter="8" style="margin-bottom:10px" v-if="!pageLoading">
-          <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
-            <el-card>
-              <ComponentNeighbourhoodInfo />
-            </el-card>
-          </el-col>
-          <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
-            <el-card>
-              <ComponentNeighbourhoodInfoList />
-            </el-card>
-          </el-col>
-        </el-row>
+        <div class="house-info-section-content" v-if="!pageLoading">
+          <el-row :gutter="8">
+            <el-col>
+              <ComponentPriceShower />
+            </el-col>
+          </el-row>
+          <el-row :gutter="8" style="margin-bottom:10px">
+            <el-col>
+              <el-card>
+                <div slot="header" class="clearfix">
+                  <span>House Price History</span>
+                </div>
+                <ComponentPriceHistory />
+              </el-card>
+            </el-col>
+          </el-row>
+          <el-row :gutter="8" style="margin-bottom:10px">
+            <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+              <el-card>
+                <ComponentNeighbourhoodInfo />
+              </el-card>
+            </el-col>
+            <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+              <el-card>
+                <ComponentNeighbourhoodInfoList />
+              </el-card>
+            </el-col>
+          </el-row>
+        </div>
       </div>
     </el-main>
   </el-container>
@@ -74,6 +76,11 @@ export default {
     pageLoading: {
       get() {
         return this.$store.getters.getPageLoading;
+      },
+    },
+    pageContentLoaded: {
+      get() {
+        return this.$store.getters.getPageContentLoaded;
       },
     },
   },
