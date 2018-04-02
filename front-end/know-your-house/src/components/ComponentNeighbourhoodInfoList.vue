@@ -3,6 +3,7 @@
     <el-table
       :data="nearbyPlaces"
       :default-sort = "{prop: 'distance', order: 'ascending'}"
+      :height = "513"
       style="width: 100%">
       <el-table-column
         prop="name"
@@ -50,7 +51,6 @@ export default {
 <style scoped>
   .neighbourhood-info-list {
     width: 100%;
-    height: 454px;
     text-align: left;
     overflow-y: auto;
   }

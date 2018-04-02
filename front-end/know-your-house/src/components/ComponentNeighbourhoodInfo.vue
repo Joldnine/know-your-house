@@ -6,7 +6,6 @@
           :key="idx"
           :label="tab.label"
           :name="tab.name"
-          style="height:100%;width:100%;"
         ></el-tab-pane>
       </el-tabs>
     </div>

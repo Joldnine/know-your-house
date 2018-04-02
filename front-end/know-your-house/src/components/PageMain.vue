@@ -32,7 +32,7 @@
             <el-col>
               <el-card>
                 <div slot="header" class="clearfix">
-                  <span>House Price History</span>
+                  <span>House Resale Price History</span>
                 </div>
                 <ComponentPriceHistory />
               </el-card>
@@ -41,6 +41,9 @@
           <el-row :gutter="8" style="margin-bottom:10px">
             <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
               <el-card>
+                <div slot="header" class="clearfix">
+                  <span>House Neighbourhood Info</span>
+                </div>
                 <ComponentNeighbourhoodInfo />
               </el-card>
             </el-col>

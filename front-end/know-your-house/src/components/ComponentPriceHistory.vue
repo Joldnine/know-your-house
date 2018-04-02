@@ -1,6 +1,10 @@
 <template>
   <div class="chart-section">
+    <div class="chart-y-label">
+      Resale Price (SGD/m<span class="text-sup">2</span>)
+    </div>
     <chartjs-line
+      class="chartjs-line"
       :data="data"
       :labels="labels"
       :datalabel="'Price'"
@@ -22,7 +26,6 @@
           }],
         },
       }"
-      class="chartjs-line"
     ></chartjs-line>
   </div>
 </template>
@@ -42,12 +45,18 @@ export default {
 <style scoped>
   .chart-section {
     max-width: 768px;
-    height: 300px;
     margin: auto;
+  }
+  .chart-y-label {
+    text-align: left;
   }
   .chartjs-line {
     position: relative;
-    height: 100%;
-    width:100%;
+    height: 300px;
+    width: 100%;
+  }
+  .text-sup {
+    font-size: small;
+    vertical-align: super;
   }
 </style>
