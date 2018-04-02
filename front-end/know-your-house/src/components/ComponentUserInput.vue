@@ -49,6 +49,7 @@ export default {
   methods: {
     submitForm() {
       this.$store.commit('SET_PAGE_LOADING', true);
+      this.$store.commit('SET_PAGE_CONTENT_LOADED', false);
       let loc = {};
       getGeocode(this.form.addr).then((result) => {
         loc = result.body;
@@ -57,12 +58,19 @@ export default {
         this.$store.dispatch('requestNearbyPlaces', { loc }).then(() => {
           this.$store.commit('SET_PAGE_LOADING', false);
           this.$store.commit('SET_PAGE_CONTENT_LOADED', true);
+        }).catch( () => {
+          this.$store.commit('SET_PAGE_LOADING', false);
+          this.$message('Failed to load data.');
         });
+      }).catch( () => {
+        this.$store.commit('SET_PAGE_LOADING', false);
+        this.$message('Failed to load data.');
       });
     },
     resetForm(formName) {
       this.$refs[formName].resetFields();
       this.$store.commit('RESET_USER_INPUT_ADDRESS');
+      this.$store.commit('SET_PAGE_CONTENT_LOADED', false);
     },
   },
 };
