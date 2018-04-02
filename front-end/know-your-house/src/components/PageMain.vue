@@ -22,7 +22,7 @@
         <div class="page-loading" v-if="pageLoading">
           <div class="el-icon-loading page-loading-spinner"></div>
         </div>
-        <div class="house-info-section-content" v-if="!pageLoading">
+        <div class="house-info-section-content" v-if="!pageLoading && pageContentLoaded">
           <el-row :gutter="8">
             <el-col>
               <ComponentPriceShower />

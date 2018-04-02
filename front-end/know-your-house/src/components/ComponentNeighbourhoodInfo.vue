@@ -59,14 +59,6 @@ export default {
       // tabs
       tabs: [
         {
-          label: 'Schools',
-          name: 'school',
-        },
-        {
-          label: 'Shopping malls',
-          name: 'mall',
-        },
-        {
           label: 'MRT',
           name: 'mrt',
         },
@@ -74,8 +66,16 @@ export default {
           label: 'Bus Stops',
           name: 'bus stop',
         },
+        {
+          label: 'Schools',
+          name: 'school',
+        },
+        {
+          label: 'Shopping malls',
+          name: 'mall',
+        },
       ],
-      activeTab: TAB_NAME_NOT_SELECTED,
+      activeTab: 'mrt',
 
       // maps
       // mapLoading: false,
