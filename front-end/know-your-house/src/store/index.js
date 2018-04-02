@@ -35,6 +35,7 @@ const store = new Vuex.Store({
     map_markers: [],
     selected_type: '',
     page_loading: false,
+    page_content_loaded: false,
     price: 1000000,
   },
   getters: {
@@ -43,6 +44,7 @@ const store = new Vuex.Store({
     getNearbyPlaces: state => state.near_by_places,
     getMapMarkers: state => state.map_markers,
     getPageLoading: state => state.page_loading,
+    getPageContentLoaded: state => state.page_content_loaded,
     getPrice: state => state.price,
   },
   mutations: {
@@ -60,6 +62,9 @@ const store = new Vuex.Store({
     },
     SET_PAGE_LOADING: (state, bool) => {
       state.page_loading = bool;
+    },
+    SET_PAGE_CONTENT_LOADED: (state, bool) => {
+      state.page_content_loaded = bool;
     },
     RESET_USER_INPUT_ADDRESS: (state) => {
       state.user_input_address = '';

@@ -56,6 +56,7 @@ export default {
         this.$store.commit('EDIT_USER_INPUT_ADDRESS_LOC', JSON.parse(loc));
         this.$store.dispatch('requestNearbyPlaces', { loc }).then(() => {
           this.$store.commit('SET_PAGE_LOADING', false);
+          this.$store.commit('SET_PAGE_CONTENT_LOADED', true);
         });
       });
     },
