@@ -13,8 +13,8 @@
     </el-header>
     <el-main>
       <el-row :gutter="8">
-        <el-col :xs="24" :sm="{span:12, offset:5}" :md="{span:8, offset:7}"
-                :lg="{span:6, offset:8}" :xl="{span:4, offset:9}">
+        <el-col :xs="24" :sm="{span:16, offset:3}" :md="{span:12, offset:5}"
+                :lg="{span:8, offset:7}" :xl="{span:6, offset:8}">
           <ComponentUserInput />
         </el-col>
       </el-row>
