@@ -29,9 +29,13 @@ def handler(event, context):
     """
     street = event['street']
     blk = event['blk']
+    flat_type = event['flat_type']
     rows = []
     with conn.cursor() as cur:
-        cur.execute('SELECT * FROM ResalePrices WHERE street_name="{}" AND block="{}";'.format(street, blk))
+        cur.execute('select month, FLOOR(avg(resale_price_per_sqm)) as avg_resale_price_per_sqm, flat_type \
+        from (select month, (resale_price/floor_area_sqm) as resale_price_per_sqm, flat_type \
+        from cs5224.ResalePrices where street_name="{}" and block="{}" and flat_type="{}") subA \
+        group by month order by month asc;'.format(street, blk, flat_type))
         for row in cur:
             logger.info(row)
             rows.append(row)
