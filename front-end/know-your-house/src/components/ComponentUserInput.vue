@@ -42,7 +42,8 @@
             :rules="[
               { type: 'number', message: 'Floor must be a number'}
             ]">
-            <el-input-number v-model="form.floor" :min="1" :max="100" style="width:100%;"></el-input-number>
+            <el-input-number v-model="form.floor"
+              :min="1" :max="100" style="width:100%;"></el-input-number>
           </el-form-item>
         </el-col>
         <!-- <el-col :span="12">
@@ -50,7 +51,8 @@
             :rules="[
               { type: 'number', message: 'House age must be a number'}
             ]">
-            <el-input-number v-model="form.age" :min="0" :max="100" style="width:100%;"></el-input-number>
+            <el-input-number v-model="form.age"
+              :min="0" :max="100" style="width:100%;"></el-input-number>
           </el-form-item>
         </el-col> -->
       </el-row>
@@ -71,16 +73,18 @@ export default {
   name: 'ComponentUserInput',
   data() {
     return {
-      flatTypeOpts: [{
-        value: '3 Room',
-        label: '3 Room',
-      }, {
-        value: '4 Room',
-        label: '4 Room',
-      }, {
-        value: '5 Room',
-        label: '5 Room',
-      },],
+      flatTypeOpts: [
+        {
+          value: '3 Room',
+          label: '3 Room',
+        }, {
+          value: '4 Room',
+          label: '4 Room',
+        }, {
+          value: '5 Room',
+          label: '5 Room',
+        },
+      ],
       form: {
         addr: '',
         flatType: '',
@@ -102,11 +106,11 @@ export default {
         this.$store.dispatch('requestNearbyPlaces', { loc }).then(() => {
           this.$store.commit('SET_PAGE_LOADING', false);
           this.$store.commit('SET_PAGE_CONTENT_LOADED', true);
-        }).catch( () => {
+        }).catch(() => {
           this.$store.commit('SET_PAGE_LOADING', false);
           this.$message('Failed to load data.');
         });
-      }).catch( () => {
+      }).catch(() => {
         this.$store.commit('SET_PAGE_LOADING', false);
         this.$message('Failed to load data.');
       });
