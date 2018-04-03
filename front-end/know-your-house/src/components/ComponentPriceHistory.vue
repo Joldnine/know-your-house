@@ -1,7 +1,7 @@
 <template>
   <div class="chart-section">
     <div class="no-data-view" v-if="noData">
-      <div class="info-text">No data available</div>
+      <div class="info-text">Data not available</div>
     </div>
     <div v-if="!noData">
       <div class="chart-y-label">
