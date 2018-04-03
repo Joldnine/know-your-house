@@ -45,14 +45,14 @@
             <el-input-number v-model="form.floor" :min="1" :max="100" style="width:100%;"></el-input-number>
           </el-form-item>
         </el-col>
-        <el-col :span="12">
+        <!-- <el-col :span="12">
           <el-form-item label="House age" prop="age"
             :rules="[
               { type: 'number', message: 'House age must be a number'}
             ]">
             <el-input-number v-model="form.age" :min="0" :max="100" style="width:100%;"></el-input-number>
           </el-form-item>
-        </el-col>
+        </el-col> -->
       </el-row>
       <el-row>
         <el-form-item>
