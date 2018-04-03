@@ -8,15 +8,15 @@
             :rules="[
               { required: true, message: 'Street is required'}
             ]">
-            <el-input v-model="form.addr" auto-complete="off"></el-input>
+            <el-input v-model="form.street" auto-complete="off"></el-input>
           </el-form-item>
         </el-col>
         <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12">
-          <el-form-item label="Block" prop="blk"
+          <el-form-item label="Block" prop="block"
             :rules="[
               { required: true, message: 'Block is required'}
             ]">
-            <el-input v-model="form.addr" auto-complete="off"></el-input>
+            <el-input v-model="form.block" auto-complete="off"></el-input>
           </el-form-item>
         </el-col>
         <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12">
@@ -84,7 +84,7 @@ export default {
       ],
       form: {
         street: '',
-        blk: '',
+        block: '',
         flatType: '',
         size: '',
         floor: '',
@@ -96,7 +96,7 @@ export default {
       this.$store.commit('SET_PAGE_LOADING', true);
       this.$store.commit('SET_PAGE_CONTENT_LOADED', false);
       let loc = {};
-      getGeocode(this.form.addr).then((result) => {
+      getGeocode(this.form.street).then((result) => {
         loc = result.body;
         this.$store.commit('EDIT_USER_INPUT_ADDRESS', this.form.addr);
         this.$store.commit('EDIT_USER_INPUT_ADDRESS_LOC', JSON.parse(loc));

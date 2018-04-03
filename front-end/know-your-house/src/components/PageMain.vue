@@ -132,7 +132,6 @@ a {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: white;
   z-index: 10;
 }
 .page-loading-spinner {
