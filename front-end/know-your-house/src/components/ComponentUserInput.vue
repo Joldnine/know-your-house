@@ -97,7 +97,7 @@ export default {
         const townArea = this.$store.getters.getTown.toUpperCase();
         const flatType = this.form.flatType.toUpperCase();
         const areaSqm = parseInt(this.form.size, 10);
-        const age = 10;
+        const age = (new Date()).getFullYear() - parseInt(this.$store.getters.getHouseAge);
         const floor = parseInt(this.form.floor, 10);
         const mrtDistance = this.$store.getters.getMrtDistance;
         const nearByPlaces = this.$store.getters.getNearbyPlaces;

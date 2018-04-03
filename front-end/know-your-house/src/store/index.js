@@ -40,6 +40,7 @@ const store = new Vuex.Store({
     price: 1000000,
     mrt_distance: '',
     price_history: [],
+    house_age: '15',
   },
   getters: {
     getUserInputAddress: state => state.user_input_address,
@@ -52,6 +53,7 @@ const store = new Vuex.Store({
     getTown: state => state.town,
     getMrtDistance: state => state.mrt_distance,
     getPriceHistory: state => state.price_history,
+    getHouseAge: state => state.house_age,
   },
   mutations: {
     EDIT_USER_INPUT_ADDRESS: (state, addr) => {
@@ -86,6 +88,9 @@ const store = new Vuex.Store({
     },
     SET_PRICE_HISTORY: (state, priceHistory) => {
       state.price_history = priceHistory;
+    },
+    SET_HOUSE_AGE: (state, age) => {
+      state.house_age = age;
     },
   },
   actions: {
@@ -140,6 +145,8 @@ const store = new Vuex.Store({
       return new Promise((resolve, reject) => {
         getPriceHistory(query).then((result) => {
           const resultObj = JSON.parse(result.body);
+          console.log(resultObj);
+          commit('SET_HOUSE_AGE', resultObj[0][3]);
           const priceHistory = [];
           resultObj.forEach((record) => {
             const priceRecord = {};
