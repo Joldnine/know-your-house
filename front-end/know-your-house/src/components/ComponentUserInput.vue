@@ -64,7 +64,7 @@
 </template>
 
 <script>
-import { getGeocode } from '@/api';
+import { getGeocode, getPrediction } from '@/api';
 
 export default {
   name: 'ComponentUserInput',
@@ -91,16 +91,54 @@ export default {
       },
     };
   },
+  computed: {
+    predictionForm: {
+      get() {
+        const townArea = this.$store.getters.getTown.toUpperCase();
+        const flatType = this.form.flatType.toUpperCase();
+        const areaSqm = parseInt(this.form.size, 10);
+        const age = 10;
+        const floor = parseInt(this.form.floor, 10);
+        const mrtDistance = this.$store.getters.getMrtDistance;
+        const nearByPlaces = this.$store.getters.getNearbyPlaces;
+        const numMall = nearByPlaces.filter((e) => e.type === 'mall').length;
+        const numMrt = nearByPlaces.filter((e) => e.type === 'mrt').length;
+        const numSchool = nearByPlaces.filter((e) => e.type === 'school').length;
+        return {
+          town_area: townArea,
+          flat_type: flatType,
+          area_sqm: areaSqm,
+          age,
+          floor,
+          mrt_distance: mrtDistance,
+          num_mall: numMall,
+          num_mrt: numMrt,
+          num_school: numSchool,
+        };
+      },
+    },
+  },
   methods: {
     submitForm() {
       this.$store.commit('SET_PAGE_LOADING', true);
       this.$store.commit('SET_PAGE_CONTENT_LOADED', false);
+      this.$store.commit('EDIT_USER_INPUT_ADDRESS', this.form.street);
+      const street = this.form.street;
+      this.$store.dispatch('requestTownByStreet', { street });
+      this.$store.dispatch('requestMrtDistance', { street });
       let loc = {};
       getGeocode(this.form.street).then((result) => {
         loc = result.body;
-        this.$store.commit('EDIT_USER_INPUT_ADDRESS', this.form.addr);
         this.$store.commit('EDIT_USER_INPUT_ADDRESS_LOC', JSON.parse(loc));
         this.$store.dispatch('requestNearbyPlaces', { loc }).then(() => {
+          const query = this.predictionForm;
+          getPrediction(query).then((resultPrice) => {
+            const price = parseInt(JSON.parse(resultPrice.body).price, 10);
+            this.$store.commit('SET_PRICE', price);
+          }).catch(() => {
+            this.$store.commit('SET_PAGE_LOADING', false);
+            this.$message('Failed to load data.');
+          });
           this.$store.commit('SET_PAGE_LOADING', false);
           this.$store.commit('SET_PAGE_CONTENT_LOADED', true);
         }).catch(() => {

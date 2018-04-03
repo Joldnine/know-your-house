@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import { getNearbyPlaces } from '@/api';
+import { getNearbyPlaces, getTownByStreet, getMrtDistance } from '@/api';
 
 Vue.use(Vuex);
 
@@ -33,10 +33,12 @@ const store = new Vuex.Store({
     user_input_address_loc: { lat: 1.3521, lng: 103.8198 },
     near_by_places: [],
     map_markers: [],
+    town: '',
     selected_type: '',
     page_loading: false,
     page_content_loaded: false,
     price: 1000000,
+    mrt_distance: '',
   },
   getters: {
     getUserInputAddress: state => state.user_input_address,
@@ -46,6 +48,8 @@ const store = new Vuex.Store({
     getPageLoading: state => state.page_loading,
     getPageContentLoaded: state => state.page_content_loaded,
     getPrice: state => state.price,
+    getTown: state => state.town,
+    getMrtDistance: state => state.mrt_distance,
   },
   mutations: {
     EDIT_USER_INPUT_ADDRESS: (state, addr) => {
@@ -69,6 +73,15 @@ const store = new Vuex.Store({
     RESET_USER_INPUT_ADDRESS: (state) => {
       state.user_input_address = '';
     },
+    SET_PRICE: (state, price) => {
+      state.price = price;
+    },
+    SET_TOWN: (state, town) => {
+      state.town = town;
+    },
+    SET_MRT_DISTANCE: (state, mrtDistance) => {
+      state.mrt_distance = mrtDistance;
+    },
   },
   actions: {
     requestNearbyPlaces({ commit }, { loc }) {
@@ -87,6 +100,29 @@ const store = new Vuex.Store({
             places.push(...resultByType.places);
           });
           commit('SET_NEARBY_PLACES', places);
+          console.log(places);
+          resolve();
+        }).catch(error => reject(error));
+      });
+    },
+    requestTownByStreet({ commit }, { street }) {
+      const query = {
+        street,
+      };
+      return new Promise((resolve, reject) => {
+        getTownByStreet(query).then((result) => {
+          const town = JSON.parse(result.body).town;
+          commit('SET_TOWN', town);
+          resolve();
+        }).catch(error => reject(error));
+      });
+    },
+    requestMrtDistance({ commit }) {
+      const street = [this.getters.getUserInputAddress];
+      return new Promise((resolve, reject) => {
+        getMrtDistance({ street }).then((result) => {
+          const mrtDistance = JSON.parse(result.body)[0].direction.distance.value / 1000.0;
+          commit('SET_MRT_DISTANCE', mrtDistance);
           resolve();
         }).catch(error => reject(error));
       });
