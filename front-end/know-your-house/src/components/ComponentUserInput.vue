@@ -3,15 +3,23 @@
     <el-form :model="form" ref="form" label-width="100px"
       class="demo-ruleForm">
       <el-row>
-        <el-form-item label="Address" prop="addr"
-          :rules="[
-            { required: true, message: 'Address is required'}
-          ]">
-          <el-input v-model="form.addr" auto-complete="off"></el-input>
-        </el-form-item>
-      </el-row>
-      <el-row>
-        <el-col :span="12">
+        <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
+          <el-form-item label="Street" prop="street"
+            :rules="[
+              { required: true, message: 'Street is required'}
+            ]">
+            <el-input v-model="form.addr" auto-complete="off"></el-input>
+          </el-form-item>
+        </el-col>
+        <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12">
+          <el-form-item label="Block" prop="blk"
+            :rules="[
+              { required: true, message: 'Block is required'}
+            ]">
+            <el-input v-model="form.addr" auto-complete="off"></el-input>
+          </el-form-item>
+        </el-col>
+        <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12">
           <el-form-item label="Flat type" prop="flatType"
             :rules="[
               { required: true, message: 'Flat type is required'}
@@ -26,7 +34,7 @@
             </el-select>
           </el-form-item>
         </el-col>
-        <el-col :span="12">
+        <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12">
           <el-form-item label="Size (sqm)" prop="size"
             :rules="[
               { required: true, message: 'Size is required'},
@@ -35,9 +43,7 @@
             <el-input v-model.number="form.size"></el-input>
           </el-form-item>
         </el-col>
-      </el-row>
-      <el-row>
-        <el-col :span="12">
+        <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12">
           <el-form-item label="Floor" prop="floor"
             :rules="[
               { type: 'number', message: 'Floor must be a number'}
@@ -46,15 +52,6 @@
               :min="1" :max="100" style="width:100%;"></el-input-number>
           </el-form-item>
         </el-col>
-        <!-- <el-col :span="12">
-          <el-form-item label="House age" prop="age"
-            :rules="[
-              { type: 'number', message: 'House age must be a number'}
-            ]">
-            <el-input-number v-model="form.age"
-              :min="0" :max="100" style="width:100%;"></el-input-number>
-          </el-form-item>
-        </el-col> -->
       </el-row>
       <el-row>
         <el-form-item>
@@ -86,11 +83,11 @@ export default {
         },
       ],
       form: {
-        addr: '',
+        street: '',
+        blk: '',
         flatType: '',
         size: '',
         floor: '',
-        age: '',
       },
     };
   },
