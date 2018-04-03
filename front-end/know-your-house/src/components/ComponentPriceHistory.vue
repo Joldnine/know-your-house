@@ -1,7 +1,7 @@
 <template>
   <div class="chart-section">
     <div class="no-data-view" v-if="noData">
-      <div class="info-text">No data is available</div>
+      <div class="info-text">No data available</div>
     </div>
     <div v-if="!noData">
       <div class="chart-y-label">
@@ -40,7 +40,7 @@ export default {
   name: 'ComponentPriceHistory',
   data() {
     return {
-      data: [],
+      data: [1000, 2000, 3000],
       labels: ['2015', '2016', '2017'],
     };
   },
