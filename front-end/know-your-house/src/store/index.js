@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import { getNearbyPlaces, getTownByStreet, getMrtDistance } from '@/api';
+import { getNearbyPlaces, getTownByStreet, getMrtDistance, getPriceHistory } from '@/api';
 
 Vue.use(Vuex);
 
@@ -39,6 +39,7 @@ const store = new Vuex.Store({
     page_content_loaded: false,
     price: 1000000,
     mrt_distance: '',
+    price_history: [],
   },
   getters: {
     getUserInputAddress: state => state.user_input_address,
@@ -50,6 +51,7 @@ const store = new Vuex.Store({
     getPrice: state => state.price,
     getTown: state => state.town,
     getMrtDistance: state => state.mrt_distance,
+    getPriceHistory: state => state.price_history,
   },
   mutations: {
     EDIT_USER_INPUT_ADDRESS: (state, addr) => {
@@ -81,6 +83,9 @@ const store = new Vuex.Store({
     },
     SET_MRT_DISTANCE: (state, mrtDistance) => {
       state.mrt_distance = mrtDistance;
+    },
+    SET_PRICE_HISTORY: (state, priceHistory) => {
+      state.price_history = priceHistory;
     },
   },
   actions: {
@@ -125,6 +130,29 @@ const store = new Vuex.Store({
           commit('SET_MRT_DISTANCE', mrtDistance);
           resolve();
         }).catch(error => reject(error));
+      });
+    },
+    requestPriceHistory({ commit }, { street, block, flatType }) {
+      const query = {};
+      query.street = street;
+      query.blk = block;
+      query.flat_type = flatType;
+      return new Promise((resolve, reject) => {
+        getPriceHistory(query).then((result) => {
+          const resultObj = JSON.parse(result.body);
+          const priceHistory = [];
+          resultObj.forEach((record) => {
+            const priceRecord = {};
+            priceRecord.date = record[0];
+            priceRecord.price = record[1];
+            priceHistory.push(priceRecord);
+          });
+          commit('SET_PRICE_HISTORY', priceHistory);
+          resolve();
+        }).catch((error) => {
+          commit('SET_PRICE_HISTORY', []);
+          reject(error);
+        });
       });
     },
   },

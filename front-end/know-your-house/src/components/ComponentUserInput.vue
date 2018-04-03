@@ -149,6 +149,8 @@ export default {
         this.$store.commit('SET_PAGE_LOADING', false);
         this.$message('Failed to load data.');
       });
+      this.$store.dispatch('requestPriceHistory',
+        { street: this.form.street, block: this.form.block, flatType: this.form.flatType });
     },
     resetForm(formName) {
       this.$refs[formName].resetFields();

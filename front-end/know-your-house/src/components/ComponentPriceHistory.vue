@@ -1,7 +1,7 @@
 <template>
   <div class="chart-section">
     <div class="no-data-view" v-if="noData">
-      <div class="info-text">No data available</div>
+      <div class="info-text">Data not available</div>
     </div>
     <div v-if="!noData">
       <div class="chart-y-label">
@@ -38,16 +38,30 @@
 <script>
 export default {
   name: 'ComponentPriceHistory',
-  data() {
-    return {
-      data: [1000, 2000, 3000],
-      labels: ['2015', '2016', '2017'],
-    };
-  },
   computed: {
     noData: {
       get() {
         return this.data.length === 0;
+      },
+    },
+    data: {
+      get() {
+        const prices = [];
+        const priceHistory = this.$store.getters.getPriceHistory;
+        priceHistory.forEach((record) => {
+          prices.push(record.price);
+        });
+        return prices;
+      },
+    },
+    labels: {
+      get() {
+        const priceLabels = [];
+        const priceHistory = this.$store.getters.getPriceHistory;
+        priceHistory.forEach((record) => {
+          priceLabels.push(record.date);
+        });
+        return priceLabels;
       },
     },
   },
