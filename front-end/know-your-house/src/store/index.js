@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import { getNearbyPlaces } from '@/api';
+import { getNearbyPlaces, getPriceHistory } from '@/api';
 
 Vue.use(Vuex);
 
@@ -37,6 +37,7 @@ const store = new Vuex.Store({
     page_loading: false,
     page_content_loaded: false,
     price: 1000000,
+    price_history: [],
   },
   getters: {
     getUserInputAddress: state => state.user_input_address,
@@ -46,6 +47,7 @@ const store = new Vuex.Store({
     getPageLoading: state => state.page_loading,
     getPageContentLoaded: state => state.page_content_loaded,
     getPrice: state => state.price,
+    getPriceHistory: state => state.price_history,
   },
   mutations: {
     EDIT_USER_INPUT_ADDRESS: (state, addr) => {
@@ -69,6 +71,9 @@ const store = new Vuex.Store({
     RESET_USER_INPUT_ADDRESS: (state) => {
       state.user_input_address = '';
     },
+    SET_PRICE_HISTORY: (state, priceHistory) => {
+      state.price_history = priceHistory;
+    },
   },
   actions: {
     requestNearbyPlaces({ commit }, { loc }) {
@@ -89,6 +94,29 @@ const store = new Vuex.Store({
           commit('SET_NEARBY_PLACES', places);
           resolve();
         }).catch(error => reject(error));
+      });
+    },
+    requestPriceHistory({ commit }, { street, block, flatType }) {
+      const query = {};
+      query.street = street;
+      query.blk = block;
+      query.flat_type = flatType;
+      return new Promise((resolve, reject) => {
+        getPriceHistory(query).then((result) => {
+          const resultObj = JSON.parse(result.body);
+          const priceHistory = [];
+          resultObj.forEach((record) => {
+            const priceRecord = {};
+            priceRecord.date = record[0];
+            priceRecord.price = record[1];
+            priceHistory.push(priceRecord);
+          });
+          commit('SET_PRICE_HISTORY', priceHistory);
+          resolve();
+        }).catch((error) => {
+          commit('SET_PRICE_HISTORY', []);
+          reject(error);
+        });
       });
     },
   },
