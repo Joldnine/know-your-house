@@ -110,7 +110,6 @@ const store = new Vuex.Store({
             places.push(...resultByType.places);
           });
           commit('SET_NEARBY_PLACES', places);
-          console.log(places);
           resolve();
         }).catch(error => reject(error));
       });
@@ -145,7 +144,6 @@ const store = new Vuex.Store({
       return new Promise((resolve, reject) => {
         getPriceHistory(query).then((result) => {
           const resultObj = JSON.parse(result.body);
-          console.log(resultObj);
           commit('SET_HOUSE_AGE', resultObj[0][3]);
           const priceHistory = [];
           resultObj.forEach((record) => {
