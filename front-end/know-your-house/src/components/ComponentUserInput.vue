@@ -135,12 +135,12 @@ export default {
           getPrediction(query).then((resultPrice) => {
             const price = parseInt(JSON.parse(resultPrice.body).price, 10);
             this.$store.commit('SET_PRICE', price);
+            this.$store.commit('SET_PAGE_LOADING', false);
+            this.$store.commit('SET_PAGE_CONTENT_LOADED', true);
           }).catch(() => {
             this.$store.commit('SET_PAGE_LOADING', false);
             this.$message('Failed to load data.');
           });
-          this.$store.commit('SET_PAGE_LOADING', false);
-          this.$store.commit('SET_PAGE_CONTENT_LOADED', true);
         }).catch(() => {
           this.$store.commit('SET_PAGE_LOADING', false);
           this.$message('Failed to load data.');
